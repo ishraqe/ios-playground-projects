@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q30-HI-iGz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Color Magic-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="Colorchanger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gray is boring. Choose a color!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-9I-Fzf">
+                                <rect key="frame" x="73" y="280" width="228" height="107"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="WGN-9I-Fzf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ezT-ez-ciT"/>
+                            <constraint firstItem="WGN-9I-Fzf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sK3-JY-95s"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Color Magic" id="3r7-mN-DOe">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="kjo-wT-qni"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aaP-St-IVI">
+                            <connections>
+                                <segue destination="PuC-iV-E8V" kind="show" identifier="colorPresenterSeg" id="n6D-QB-ocH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorPickerLabel" destination="WGN-9I-Fzf" id="Tse-LV-qT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="500" y="134"/>
+        </scene>
+        <!--Color PickerVC View Controller-->
+        <scene sceneID="mn4-Z2-fGh">
+            <objects>
+                <viewController id="PuC-iV-E8V" customClass="ColorPickerVCViewController" customModule="Colorchanger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CrG-EO-ZGU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FG1-l9-5bF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBq-sy-OQ5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWaspreesedWithSender:" destination="PuC-iV-E8V" eventType="touchUpInside" id="6Ha-f6-OTv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngI-Ry-Lsp">
+                                        <rect key="frame" x="0.0" y="120.5" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="Perple">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWaspreesedWithSender:" destination="PuC-iV-E8V" eventType="touchUpInside" id="UU1-V9-Edp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-rp-ECa">
+                                        <rect key="frame" x="0.0" y="241" width="375" height="121"/>
+                                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="sky Blue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWaspreesedWithSender:" destination="PuC-iV-E8V" eventType="touchUpInside" id="tfL-Ef-9Lb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-y0-xJw">
+                                        <rect key="frame" x="0.0" y="362" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="Pink">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWaspreesedWithSender:" destination="PuC-iV-E8V" eventType="touchUpInside" id="xS9-hK-Ixn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-Ic-2u7">
+                                        <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWaspreesedWithSender:" destination="PuC-iV-E8V" eventType="touchUpInside" id="1b9-NX-8dg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FG1-l9-5bF" firstAttribute="leading" secondItem="nKv-pW-d5f" secondAttribute="leading" id="8z1-r8-8ty"/>
+                            <constraint firstItem="nKv-pW-d5f" firstAttribute="bottom" secondItem="FG1-l9-5bF" secondAttribute="bottom" id="GMz-0e-piP"/>
+                            <constraint firstItem="FG1-l9-5bF" firstAttribute="top" secondItem="nKv-pW-d5f" secondAttribute="top" id="Gz8-Lt-HjI"/>
+                            <constraint firstItem="nKv-pW-d5f" firstAttribute="trailing" secondItem="FG1-l9-5bF" secondAttribute="trailing" id="ZcP-dw-u2I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nKv-pW-d5f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9v-Bo-cZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269.5999999999999" y="134.48275862068968"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X9r-Pm-ZPi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q30-HI-iGz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pv0-5L-tfv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="57l-MO-tgj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Laz-jA-gcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="134"/>
         </scene>
     </scenes>
 </document>

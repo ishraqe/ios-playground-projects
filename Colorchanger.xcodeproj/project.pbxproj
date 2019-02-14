@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		018ACFCD2215554400D4F6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018ACFCC2215554400D4F6AF /* AppDelegate.swift */; };
-		018ACFCF2215554400D4F6AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018ACFCE2215554400D4F6AF /* ViewController.swift */; };
+		018ACFCF2215554400D4F6AF /* ColorPresenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018ACFCE2215554400D4F6AF /* ColorPresenterVC.swift */; };
 		018ACFD22215554400D4F6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018ACFD02215554400D4F6AF /* Main.storyboard */; };
 		018ACFD42215554600D4F6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018ACFD32215554600D4F6AF /* Assets.xcassets */; };
 		018ACFD72215554600D4F6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018ACFD52215554600D4F6AF /* LaunchScreen.storyboard */; };
+		018ACFDF221578D100D4F6AF /* ColorPickerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018ACFDE221578D100D4F6AF /* ColorPickerVCViewController.swift */; };
+		018ACFE122157BE200D4F6AF /* ColorTransferDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018ACFE022157BE200D4F6AF /* ColorTransferDelegates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		018ACFC92215554400D4F6AF /* Colorchanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorchanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018ACFCC2215554400D4F6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		018ACFCE2215554400D4F6AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		018ACFCE2215554400D4F6AF /* ColorPresenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPresenterVC.swift; sourceTree = "<group>"; };
 		018ACFD12215554400D4F6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		018ACFD32215554600D4F6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018ACFD62215554600D4F6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018ACFD82215554600D4F6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		018ACFDE221578D100D4F6AF /* ColorPickerVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVCViewController.swift; sourceTree = "<group>"; };
+		018ACFE022157BE200D4F6AF /* ColorTransferDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTransferDelegates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				018ACFCC2215554400D4F6AF /* AppDelegate.swift */,
-				018ACFCE2215554400D4F6AF /* ViewController.swift */,
+				018ACFCE2215554400D4F6AF /* ColorPresenterVC.swift */,
 				018ACFD02215554400D4F6AF /* Main.storyboard */,
 				018ACFD32215554600D4F6AF /* Assets.xcassets */,
 				018ACFD52215554600D4F6AF /* LaunchScreen.storyboard */,
 				018ACFD82215554600D4F6AF /* Info.plist */,
+				018ACFDE221578D100D4F6AF /* ColorPickerVCViewController.swift */,
+				018ACFE022157BE200D4F6AF /* ColorTransferDelegates.swift */,
 			);
 			path = Colorchanger;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				018ACFCF2215554400D4F6AF /* ViewController.swift in Sources */,
+				018ACFCF2215554400D4F6AF /* ColorPresenterVC.swift in Sources */,
+				018ACFE122157BE200D4F6AF /* ColorTransferDelegates.swift in Sources */,
+				018ACFDF221578D100D4F6AF /* ColorPickerVCViewController.swift in Sources */,
 				018ACFCD2215554400D4F6AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
